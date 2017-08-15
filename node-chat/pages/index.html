@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Node-Chat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/cover.css">
+    <link rel="stylesheet" href="../assets/styles/chat-list.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <!--  -->
+      <div class="top-area">
+        <p class="title">Node-Chat</p>
+          <span id="status"></span>
+        <div id="recv-area">
+        </div><!-- recv-area -->
+      </div><!-- top-area -->
+      <div class="bottom-area">
+        <div class="edit">
+          <input type="color" placeholder="#000" title="font color" id="color" >
+          <input type="submit" value="emoji" title="emoji" id="emoji" class="edit-btn">
+          <label for="sendImage" class="imageLable ">
+            <!-- <input type="submit" value="image" class="edit-btn">  -->
+            <input id="sendImage" type="file">
+          </label>
+          <input type="submit" value="clear" id="clear-btn" class="edit-btn">
+        </div>
+        <div class="input-area">
+          <textarea id="input"></textarea>
+          <button id="send-btn">发送</button>
+        </div>
+      </div><!-- bottom-area -->
+    </div><!-- wrap -->
+
+    <!-- 表情包  -->
+    <div id= "emoji-wrapper"></div>
+
+    <!-- 遮罩层  -->
+    <div id="cover-wrapper">
+      <p id="info">Connecting to server...</p>
+      <div id="nick-wrapper">
+          <input type="text" placeholder="username" id="username">
+          <input type="submit" value="Login" id="login-btn">
+      </div>
+    </div>
+
+    <!-- 聊天列表  -->
+    <div class="chat-list" >在线用户列表
+      <ul id="userList"></ul>
+    </div>
+   
+    
+  </body>
+  <script src="./../socket.io/socket.io.js"></script> 
+  <script src="../assets/scripts/chat.js"></script> 
+</html>

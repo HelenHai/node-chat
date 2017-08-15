@@ -1,0 +1,49 @@
+<!-- 客户端Client  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> WebSocket客户端</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <input type="button" id="btn-connect" value="连接">
+    <input type="button" id="btn-close" value="关闭">
+    <input type="button" id="btn-send" value="发送">
+  </body>
+  <script>
+    if(typeof(WebSocket)=='undefined'){
+      alert('您的浏览器不支持WebSocket')
+      // return
+    }
+    var socket
+    document.getElementById('btn-connect').click(function(){
+      socket = new WebSocket("ws://127.0.0.1:3000")
+      //打开事件
+      socket.onopen = function(){
+        console.log('socket is opening...')
+        alert('socket已经打开...')
+      }
+      //获取事件消息
+      socket.onmessage=function(msg){
+        console.log('success...')
+        alert(msg.data)
+      }
+      //关闭事件
+      socket.close()=function(){
+        console.log('closed!')
+      }
+      //发生了错误
+      socket.onerror=function(){
+        alert('Error!')
+      }
+    })
+
+    document.getElementById('btn-send').click(function(){
+      socket.send('这是来自客户端的消息'+location.href+new Date())
+    })
+    document.getElementById('btn-close').click(function(){
+      socket.close()
+    })
+  </script>
+</html>

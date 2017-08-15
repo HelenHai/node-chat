@@ -1,0 +1,13 @@
+.chat-list{
+  position: fixed; bottom: 0; right:10px;
+  height:25%; width:10%;
+  background-color: #e8e8e8;
+  overflow: scroll;
+  /* opacity: 0.3;  */
+}
+.chat-list li{
+  list-style: none;
+  background-color: #FFF1A8;
+  border-radius: 3px;
+  margin:2px 0;
+}

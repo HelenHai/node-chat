@@ -1,0 +1,81 @@
+*{
+  padding:0;
+  margin:0;
+}
+html,body{
+  height:100%; width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.wrap{
+  width:70%;
+  height:85%;
+}
+.top-area{
+  background-color:#e8e8e8;
+  height:50%;
+}
+.title{
+  height:15%; line-height:40px;
+  text-align: center;
+  font-size:17px;
+  background-color: #625772;
+  border-radius:5px;
+}
+#recv-area{
+  height:75%;
+  overflow: scroll;
+  padding:10px;
+}
+#recv-area img{
+  height:20%;width:10%;
+}
+.time{
+  color:gray;
+  font-size:12px;
+}
+.bottom-area{
+  height:50%;  
+}
+.edit{
+  background: #FFF1A8;
+  height:15%;
+  padding-left:10px;
+}
+.edit-btn{
+  margin-top:7px;
+  border:none;
+  background-color: #2D5C7F;
+  color:#FFF;
+  width:55px;height:25px; 
+  border-radius: 3px;
+}
+#emoji-wrapper{
+  height:25%;width:33%;
+  position: absolute;
+  left:20%; top:24%;
+  overflow: scroll;
+  display: none;
+}
+.input-area{
+  background:#e8e8e8;
+  height:85%;
+  border-radius:5px;
+}
+#input{
+  width:90%;height:70%;
+  margin:2.5% 5% 0.5% 5%;
+  outline:none;
+  resize: none;
+  border:none;
+  font-size:15px;
+  border-radius:5px;
+}
+#send-btn{
+  float:right; margin-right:20px;
+  border:none;
+  background-color: #FF8F56;
+  border-radius:5px;
+  height:30px; width:60px;
+}
